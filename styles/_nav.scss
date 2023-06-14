@@ -1,0 +1,155 @@
+.nav{
+    display: flex;
+    position: sticky;
+    font-size: $medium;
+    font-family: $font-primary;
+    justify-content: space-between;
+    width: 100%;
+    //make it center
+    margin: 0 auto;
+    padding: 2rem 5rem;
+
+
+    .logo{
+        //centre the logo
+        display: flex;
+        align-items: center;
+
+        a{
+        text-decoration: none;
+        color: $clr-primary;
+        font-size: $big;
+        font-weight: 600;
+        letter-spacing: 5px;
+        
+        }
+    }
+    .menu{
+        width: 500px;
+        ul{
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            li{
+                display: inline-block;
+                a{
+                    text-decoration: none;
+                    color: $clr-white;
+                    font-size: $medium;
+                    font-weight: 300;
+                    padding-bottom: 3px;
+                    //animation border bottom when hover
+                    transition: all 0.3s ease-in-out;
+                    &:hover{
+                        color: $clr-primary;
+                        border-bottom: 3px solid $clr-primary;
+                    }
+                    //display none when screen is smaller than 768px
+                    @media screen and (max-width: 768px){
+                        display: none;
+                    }
+                }
+            }
+        }
+        
+    }
+    .hamburgermenu{
+        display: none;
+        @media screen and (max-width: 768px){
+            display: block;
+            cursor: pointer;
+            .menusmall{
+                display: none;
+                //active when click on the hamburger menu 
+                //display the menu
+                &.active{
+                    display: flex;
+                    justify-content: center;
+                    position: absolute;
+                    top: 103px;
+                    left: 0;
+                    width: 100%;
+                    height: 30;
+                    background-color: $clr-background;
+                    z-index: -1;
+                    box-shadow: 0 4px 5px 0 $clr-primary;
+                    ul{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        list-style: none;
+                        height: 100%;
+                        width: 100%;
+                        padding-inline-start: 0;
+                        margin-block: 0 30px;
+                        li{
+                            margin: 1rem 0;
+                            a{
+                                padding: 1rem;
+                                color: $clr-white;
+                                font-size: $medium;
+                                font-weight: 600;
+                                letter-spacing: 5px;
+                                text-decoration: none;
+                                &:hover{
+                                    color: $clr-primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            span{
+                display: block;
+                width: 30px;
+                height: 3px;
+                background-color: $clr-white;
+                margin: 5px auto;
+                transition: all 0.3s ease-in-out;
+              
+            }
+            &.active span:nth-child(1){
+                width: 30px;
+                transform: rotate(45deg) translate(5px, 5px);
+                background-color: $clr-primary;
+            }
+            &.active span:nth-child(2){
+                width: 30px;
+                transform: rotate(0deg) translate(-5px, 0px);
+                opacity: 0;
+            }
+            &.active span:nth-child(3){
+                transform: rotate(-45deg) translate(6px, -5px);
+                background-color: $clr-primary;
+            }
+            
+        }
+
+    }
+
+}
+.sectionsocial{
+    float: right;
+    position: relative;
+    width: 300px;
+    transform: translateX(-60%);
+    .social{
+    display:flex;
+    justify-content: space-evenly;
+    //icon smaller when screen is smaller than 768px
+    @media screen and (max-width:1180px){
+        width: 100%; 
+        transform: translateX(-55%);
+        float: left;
+        scale: 1.2;
+    }
+    //icon align center when screen is smaller than 768px
+    @media screen and (max-width:768px){
+        width: 100%; 
+        transform: translateX(0%);
+        float: left;
+        scale: 1.2;
+    }
+}
+}
