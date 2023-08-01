@@ -457,6 +457,7 @@ footer span {
     -webkit-text-size-adjust: 60%;
        -moz-text-size-adjust: 60%;
             text-size-adjust: 60%;
+    padding: 1rem 2rem;
   }
   section h1 {
     font-size: 3rem;
@@ -471,6 +472,7 @@ footer span {
 
 @media (max-width: 768px) {
   .section-intro {
+    margin-top: 5%;
     flex-direction: column;
     text-align: center;
   }
@@ -479,7 +481,7 @@ footer span {
     font-size: 1.3rem;
   }
   .section-intro h1 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
   .section-intro .profile {
     margin-top: 2rem;
@@ -516,8 +518,23 @@ footer span {
   .about-description,
   .education-description,
   .skills-description,
-  .portfolio-description {
+  .portfolio-description, .contact-description {
     width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact a {
+    font-size: 2rem;
+  }
+  .contact h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about, .education, .skills {
+    padding: 0 10%;
   }
 }
 
