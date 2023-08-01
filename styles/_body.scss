@@ -507,7 +507,7 @@ section {
   @media (max-width: 768px) {
     flex-direction: column;
     height: auto;
-    text-size-adjust: 60%;
+    text-size-adjust: 80%;
     padding: 1rem 2rem;
 
     h1 {
@@ -533,13 +533,17 @@ section {
     margin-top: 5%;
     flex-direction: column;
     text-align: center;
+    padding: 0 10%;
     
     h3{
         line-height: 2;
-        font-size: 1.3rem;
+        font-size: 2rem;
     }
     h1{
-        font-size: 4rem;
+        font-size: 5rem;
+    }
+    p{
+        font-size: 1.2rem;
     }
 
     .profile {
