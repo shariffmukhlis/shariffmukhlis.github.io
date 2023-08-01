@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="icon" href="images/shariff-logo.svg" type="image/x-icon">
 
-    <title>Shariff Mukhlis</title>
+    <title>Shariff Mukhlis - Portfolio Website</title>
 </head>
 <body>
     <nav>
@@ -22,14 +23,14 @@
                 <li class="list-menu"> <a href="index.html#contact">Contact</a></li>
             </ul>
         </div>
-        <div class="hamburgermenu">
+        <div onclick="clickmenu" class="hamburgermenu">
             <span></span><span></span><span></span>
             <div class="menusmall">
                 <ul>
                     <li class="list-menu"> <a href="#">Home</a></li>
-                    <li class="list-menu"> <a href="#">About</a></li>
-                    <li class="list-menu"> <a href="#">Portfolio</a></li>
-                    <li class="list-menu"> <a href="#">Contact</a></li>
+                    <li class="list-menu"> <a href="index.html#about-me">About</a></li>
+                    <li class="list-menu"> <a href="index.html#portfolio">Portfolio</a></li>
+                    <li class="list-menu"> <a href="index.html#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -38,7 +39,7 @@
     <section class="section-intro fade-in">
         <div class="intro fade-in">
             <h1>Holla <span>Molla</span></h1>
-            <h3>I'm Shariff, an <span>Interactive Media </span> Student and a <span>Youtuber</span></h3>
+            <h3>I'm Shariff, an <span>Interactive Media </span> Student and a <span>Graphic Designer</span></h3>
             <p>I'm seek for internship in <span>frontend developer</span> or <span>3D modeller</span> </p>
             <a href="#" class="btn-flip" data-back="About Me" data-front="More"></a>
         </div>
@@ -135,7 +136,7 @@
                 </div>
             </div>
         </div>
-        <a class="btn-flip" data-back="Download" data-front="Resume"></a>
+        <a target="_blank" href="docs/Resume Shariff Mukhlis.pdf" class="btn-flip" data-back="Download" data-front="Resume"></a>
     </section>
     <svg class="linebreak fade-in" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.71 430.6"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><rect x="14.35" y="42.6" width="7" height="388"/><polygon points="35.71 4.95 30.76 0 17.85 12.9 4.95 0 0 4.95 12.9 17.85 0 30.76 4.95 35.71 17.85 22.8 30.76 35.71 35.71 30.76 22.8 17.85 35.71 4.95"/></g></g></svg>
     <a id="portfolio"></a>
@@ -144,30 +145,80 @@
     </div>
     <section class="portfolio fade-in">
         <div class="portfolio-line-description">
+            <div class="portfolio-line-description-left fade-in">
+                <img src="https://gayongjourneymotioncomic.github.io/img/silat2_bg.jpg" alt="">
+            </div>
+            <div class="portfolio-line-description-right fade-in">
+                <h6>Web Development | 3D Animation</h6>
+                <h3>Gayong Journey</h3>
+                <p>
+                   "Gayong Journey" follows the transformative experiences of Rahmat, a timid teenager, and Naim, a skilled Silat Gayong practitioner. Naim's mentorship empowers Rahmat, helping him gain strength, confidence, and resilience. As they navigate challenges and learn life lessons, their bond grows stronger. This captivating tale showcases the empowering effects of Silat Gayong and the power of mentorship in fostering personal growth.
+                    <br><br>
+                    Visit the website below.
+                </p>
+                <a target="_blank" href="https://gayongjourneymotioncomic.github.io/">continue</a>
+            </div>
+        </div>            
+        <div class="portfolio-line-description">
             <div class="portfolio-line-description-left">
                 <h6>Videography</h6>
                 <h3>Aku Anti Merdeka</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae laudantium, corporis dolor beatae suscipit mollitia id expedita cum eius hic vel tenetur et distinctio veritatis consequatur temporibus quas nisi delectus!</p>
-                <a href="#">continue</a>
+                <p>This short film sought to portray a real-life Malaysian who questioned why people 
+                    continued to celebrate Merdeka. This short film depicts what life was like before 
+                    independence in order to answer that question why we need to appreciate Merdeka.
+                    <br><br>
+                    Read more in the short film website below.
+                </p>
+                <a target="_blank" href="https://shariffmukhlisrahmatullah.wordpress.com/portfolio-2/">continue</a>
             </div>
             <div class="portfolio-line-description-right">
-                <img src="images/Profile.png" alt="">
+                <img src="https://shariffmukhlisrahmatullah.files.wordpress.com/2023/01/poster-01.jpg?w=724" alt="">
             </div>
         </div>
         <div class="portfolio-line-description">
+            <div class="portfolio-line-description-left fade-in">
+                <img src="images/homepage-mozac.png" alt="">
+            </div>
+            <div class="portfolio-line-description-right fade-in">
+                <h6>Web Development</h6>
+                <h3>Class Attendance System</h3>
+                <p>Class Attendance System MOZAC is a collaborative project where I led the team and worked on frontend development and database management. Built with HTML, CSS, PHP, MySQL, and JavaScript, MOZAC modernizes attendance tracking in educational institutions. It offers real-time attendance taking, customizable settings, and insightful reports, seamlessly integrating with existing databases for data consistency. This powerful tool enhances student engagement and simplifies attendance management for teachers. 
+                    <br><br>
+                    Visit the github repository below to read more.
+                </p>
+                <a target="_blank" href="https://github.com/shariffmukhlis/classattendancesystem/tree/master">continue</a>
+            </div>
+        </div>            
+        <div class="portfolio-line-description">
             <div class="portfolio-line-description-left">
-                <img src="images/Portfolio1.png" alt="">
+                <h6>Web Development</h6>
+                <h3>James Clear Replicate</h3>
+                <p>
+                    This project aims to recreate James Clear's website using SCSS, HTML, and JavaScript. The focus is on replicating the clean and minimalist design of the original website and ensuring responsiveness for various devices. By working on this project, I will gain valuable experience in front-end development and improve my skills in organizing code with SCSS, creating structured HTML layouts, and implementing interactive features using JavaScript. The final result will serve as a showcase of my ability to reproduce a well-designed website and add value to my portfolio as a front-end developer.
+                    <br><br>
+                    Visit the website below
+                </p>
+                <a target="_blank" href="https://shariffmukhlis.github.io/jamesclearreplicate.github.io/">continue</a>
             </div>
             <div class="portfolio-line-description-right">
-                <h6>Videography</h6>
-                <h3>Aku Anti Merdeka</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae laudantium, corporis dolor beatae suscipit mollitia id expedita cum eius hic vel tenetur et distinctio veritatis consequatur temporibus quas nisi delectus!</p>
-                <a href="#">continue</a>
+                <img src="images/homepage-jamesclear.png" alt="">
             </div>
+        </div>           </div>
         </div>
     </section>
     <a id="contact"></a>
-    <section class="contact"></section>
+    <section class="contact fade-in">
+        <div class="contact-title title">
+            CONTACT
+        </div>
+        <div class="contact-line-description">
+            <h3>If you are interested, feel free to email me at</h3>
+            <a href="mailto:shariffmukhlis0@gmai.com">shariffmukhlis0@gmail.com</a>
+        </div>
+
+
+
+    </section>
     <footer>
         <p> &copy; 2023 Shariff Mukhlis</p>
     </footer>

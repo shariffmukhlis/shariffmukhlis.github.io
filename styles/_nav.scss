@@ -11,6 +11,15 @@ nav{
     justify-content: space-between;
 
 
+    .hamburgermenu{
+        >span{
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: $clr-primary;
+            margin: 5px;
+        }
+    }
     .logo{
         letter-spacing: 5px;
         font-family: $font-primary;
@@ -40,6 +49,72 @@ nav{
        }
     }
     .hamburgermenu{
-        display: none;
+       display: none; 
+        .menusmall{
+            position: absolute;
+            right: 0;
+            top: 90%;
+            width: 100vw;
+            height: 100vh;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            background-color: $clr-white;
+            transform: translateX(100%);
+            box-shadow: 2px 2px 5px rgba($clr-primary, 0.5);
+            transition: all 0.3s ease-in-out;
+            ul{
+                display: flex;
+                margin: 0;
+                flex-direction: column;
+                align-items: center;
+                margin-left: 0;
+                justify-content: space-between;
+                padding-left: 0;
+                width: 100%;
+                li{
+                    margin: 0;
+                    margin-left: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 1.2rem;
+                    a{
+                        text-align: center;
+                        color: $clr-primary;
+                    }
+                    &:hover{
+                        background-color: $clr-primary;
+                        a{
+                            color: $clr-white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//hamberger menu for mobile view
+@media only screen and (max-width: 768px){
+    nav{
+        padding-inline: 3rem;
+
+        .menu{
+            display: none;
+        }
+        .hamburgermenu{
+            display: block;
+            cursor: pointer;
+
+            .menusmall.open{
+                transform: translateX(0%);
+                display: flex;
+            }
+        }
+
+
     }
 }

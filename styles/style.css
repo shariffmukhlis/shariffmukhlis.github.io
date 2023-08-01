@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400;1,500&display=swap");
 .linebreak {
   width: 15px;
   display: block;
@@ -14,6 +15,7 @@ section {
   justify-content: space-between;
   opacity: 0;
   margin: 0;
+  overflow: hidden;
   padding: 3rem 5rem 0 5rem;
 }
 section h1 {
@@ -139,11 +141,11 @@ section button:hover {
   margin-top: 50px;
 }
 
-.about, .education, .skills, .portfolio {
+.about, .education, .skills, .portfolio, .contact {
   height: -moz-fit-content;
   height: fit-content;
 }
-.about-title, .education-title, .skills-title, .portfolio-title {
+.about-title, .education-title, .skills-title, .portfolio-title, .contact-title {
   position: absolute;
   font-weight: 800;
   font-size: 12rem;
@@ -159,23 +161,23 @@ section button:hover {
     transform: translateX(100%);
   }
 }
-.about-description, .education-description, .skills-description, .portfolio-description {
+.about-description, .education-description, .skills-description, .portfolio-description, .contact-description {
   display: block;
   margin: 0 auto;
   width: 60%;
 }
-.about-description h4, .education-description h4, .skills-description h4, .portfolio-description h4 {
+.about-description h4, .education-description h4, .skills-description h4, .portfolio-description h4, .contact-description h4 {
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 1rem;
   color: rgba(0, 0, 0, 0.3);
   text-transform: uppercase;
 }
-.about-description p, .education-description p, .skills-description p, .portfolio-description p {
+.about-description p, .education-description p, .skills-description p, .portfolio-description p, .contact-description p {
   font-size: 1.7rem;
   font-weight: 500;
 }
-.about-description p span, .education-description p span, .skills-description p span, .portfolio-description p span {
+.about-description p span, .education-description p span, .skills-description p span, .portfolio-description p span, .contact-description p span {
   font-weight: 700;
   text-transform: none;
   border-bottom: 8px solid #01aeff;
@@ -389,12 +391,168 @@ footer span {
   color: #01aeff;
 }
 .portfolio-line-description-left > img, .portfolio-line-description-right > img {
-  width: 400px;
+  width: 300px;
   position: relative;
   margin: 0 auto;
   -o-object-fit: cover;
      object-fit: cover;
   filter: drop-shadow(0 5px 10px #01aeff);
+  transition: all 0.3s ease-in-out;
+}
+.portfolio-line-description-left > img:hover, .portfolio-line-description-right > img:hover {
+  transform: scale(1.2);
+  animation: rotate 0.5s linear infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(3deg);
+  }
+  75% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.portfolio-line-description-left-left, .portfolio-line-description-right-left {
+  transform: translateX(-100%);
+}
+.portfolio-line-description-left-right, .portfolio-line-description-right-right {
+  transform: translateX(100%);
+}
+
+.contact {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+  flex-direction: column;
+  text-align: center;
+}
+.contact h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.contact a {
+  font-size: 4rem;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  section {
+    flex-direction: column;
+    height: auto;
+    -webkit-text-size-adjust: 60%;
+       -moz-text-size-adjust: 60%;
+            text-size-adjust: 60%;
+  }
+  section h1 {
+    font-size: 3rem;
+  }
+  section h3 {
+    font-size: 1.2rem;
+  }
+  section p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-intro {
+    flex-direction: column;
+    text-align: center;
+  }
+  .section-intro h3 {
+    line-height: 2;
+    font-size: 1.3rem;
+  }
+  .section-intro h1 {
+    font-size: 3rem;
+  }
+  .section-intro .profile {
+    margin-top: 2rem;
+  }
+  .section-intro .profile img {
+    width: 300px;
+  }
+  .section-intro .socialmedias {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+  }
+  .section-intro .socialmedias > .social {
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    padding: 0;
+    height: 100%;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .section-intro .socialmedias > .social > * {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+  }
+  .section-intro .intro {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-description,
+  .education-description,
+  .skills-description,
+  .portfolio-description {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .education .education-line,
+  .education .skills-line,
+  .skills .education-line,
+  .skills .skills-line {
+    width: 100%;
+  }
+  .education .education-line ul,
+  .education .skills-line ul,
+  .skills .education-line ul,
+  .skills .skills-line ul {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn-flip {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-line-description {
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 50px;
+  }
+  .portfolio-line-description-left, .portfolio-line-description-right {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .portfolio-line-description-left > img, .portfolio-line-description-right > img {
+    width: 100%;
+  }
 }
 
 body {
@@ -421,6 +579,13 @@ nav {
   z-index: 100;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
   justify-content: space-between;
+}
+nav .hamburgermenu > span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #01aeff;
+  margin: 5px;
 }
 nav .logo {
   letter-spacing: 5px;
@@ -451,4 +616,65 @@ nav ul li a:hover {
 }
 nav .hamburgermenu {
   display: none;
+}
+nav .hamburgermenu .menusmall {
+  position: absolute;
+  right: 0;
+  top: 90%;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #dddddd;
+  transform: translateX(100%);
+  box-shadow: 2px 2px 5px rgba(1, 174, 255, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+nav .hamburgermenu .menusmall ul {
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 0;
+  justify-content: space-between;
+  padding-left: 0;
+  width: 100%;
+}
+nav .hamburgermenu .menusmall ul li {
+  margin: 0;
+  margin-left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem;
+}
+nav .hamburgermenu .menusmall ul li a {
+  text-align: center;
+  color: #01aeff;
+}
+nav .hamburgermenu .menusmall ul li:hover {
+  background-color: #01aeff;
+}
+nav .hamburgermenu .menusmall ul li:hover a {
+  color: #dddddd;
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    padding-inline: 3rem;
+  }
+  nav .menu {
+    display: none;
+  }
+  nav .hamburgermenu {
+    display: block;
+    cursor: pointer;
+  }
+  nav .hamburgermenu .menusmall.open {
+    transform: translateX(0%);
+    display: flex;
+  }
 }/*# sourceMappingURL=style.css.map */

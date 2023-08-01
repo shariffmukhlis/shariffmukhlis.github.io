@@ -12,6 +12,7 @@ section {
     justify-content: space-between;
     opacity: 0;
     margin: 0;
+    overflow: hidden;
     padding: 3rem 5rem 0 5rem;
     h1{
         font-size: 5rem;
@@ -160,7 +161,7 @@ section {
     margin-top: 50px;
     
 }
-.about,.education, .skills, .portfolio{
+.about,.education, .skills, .portfolio, .contact{
     height: fit-content;
     
 
@@ -434,13 +435,192 @@ footer{
             }
             
             &>img{
-                width: 400px;
+                width: 300px;
                 position: relative;
                 margin: 0 auto;
                 object-fit: cover;
                 filter: drop-shadow(0 5px 10px $clr-primary);
+                transition: all 0.3s ease-in-out;
+                &:hover{
+                    transform: scale(1.2);
+                    animation: rotate 0.5s linear infinite;
+                }
+                //animation image rotate effect using keyframes
+                @keyframes rotate{
+                    0%{
+                        transform: rotate(0deg);
+                    }
+                    25%{
+                        transform: rotate(3deg);
+                    }
+              
+                    75%{
+                        transform: rotate(-3deg);
+                    }
+                    100%{
+                        transform: rotate(0deg);
+                    }
+                }   
+            }
+
+            &-left{
+                transform: translateX(-100%);
+            }
+            &-right{
+                transform: translateX(100%);
             }
         }
         
     }
+}
+
+.contact{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+    flex-direction: column;
+    text-align: center;
+
+    h3{
+        font-size: 1.5rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: rgba(black, 0.6);
+    }
+    a{
+        font-size: 4rem;
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+
+        font-weight: 700;
+    }
+}
+
+section {
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+    text-size-adjust: 60%;
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+
+
+
+
+.section-intro {
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+    
+    h3{
+        line-height: 2;
+        font-size: 1.3rem;
+    }
+    h1{
+        font-size: 3rem;
+    }
+
+    .profile {
+      margin-top: 2rem;
+      
+      img{
+        width: 300px;
+      }
+    }
+    .socialmedias{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        &>.social{
+            flex-direction: row;
+            gap: 1rem;
+            align-items: center;
+            padding: 0;
+            height: 100%;
+            width: fit-content;
+            &>*{
+            margin: 0;
+            padding: 0;
+            font-size: 1.5rem;
+            }
+        }
+    }
+
+    .intro {
+      max-width: 100%;
+    }
+  }
+}
+
+.about,
+.education,
+.skills,
+.portfolio {
+
+  @media (max-width: 768px) {
+    &-description {
+      width: 100%;
+    }
+  }
+}
+
+.education,
+.skills {
+
+  @media (max-width: 768px) {
+    .education-line,
+    .skills-line {
+      width: 100%;
+
+      ul {
+        justify-content: center;
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+.btn-flip {
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
+}
+
+.portfolio {
+
+
+  @media (max-width: 768px) {
+    &-line-description {
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 50px;
+
+        &-left,&-right{
+            width: 100%;
+            margin-bottom: 2rem;
+            &>img{
+                width: 100%;
+            }
+        }
+    }
+  }
 }

@@ -18,3 +18,11 @@ const appearOnScroll = new IntersectionObserver(function(entries){
 faders.forEach(fader => {
     appearOnScroll.observe(fader);
 });
+
+//click hamburger menu to show nav
+const hamburger = document.querySelector('.hamburgermenu');
+const navLinks = document.querySelector('.menusmall');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+});
