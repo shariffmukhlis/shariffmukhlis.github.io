@@ -443,8 +443,11 @@ footer span {
 .contact a {
   font-size: 4rem;
   font-family: "Playfair Display", serif;
-  font-style: italic;
+  transition: all 0.3s ease-in-out;
   font-weight: 700;
+}
+.contact a:hover {
+  font-style: italic;
 }
 
 @media (max-width: 768px) {
