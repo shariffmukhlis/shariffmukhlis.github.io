@@ -650,7 +650,7 @@ nav .hamburgermenu .menusmall {
   display: none;
   justify-content: center;
   align-items: center;
-  background-color: #dddddd;
+  background-color: white;
   transform: translateX(100%);
   box-shadow: 2px 2px 5px rgba(1, 174, 255, 0.5);
   transition: all 0.3s ease-in-out;
@@ -683,7 +683,7 @@ nav .hamburgermenu .menusmall ul li:hover {
   background-color: #01aeff;
 }
 nav .hamburgermenu .menusmall ul li:hover a {
-  color: #dddddd;
+  color: white;
 }
 
 @media only screen and (max-width: 768px) {

@@ -59,7 +59,7 @@ nav{
             display: none;
             justify-content: center;
             align-items: center;
-            background-color: $clr-white;
+            background-color: white;
             transform: translateX(100%);
             box-shadow: 2px 2px 5px rgba($clr-primary, 0.5);
             transition: all 0.3s ease-in-out;
@@ -88,7 +88,7 @@ nav{
                     &:hover{
                         background-color: $clr-primary;
                         a{
-                            color: $clr-white;
+                            color: white;
                         }
                     }
                 }
