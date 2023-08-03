@@ -1,6 +1,6 @@
 {
     "workbench.activityBar.visible": false,
-    "workbench.statusBar.visible": false,
+    "workbench.statusBar.visible": true,
     "editor.minimap.enabled": false,
     "editor.hideCursorInOverviewRuler": true,
     "editor.overviewRulerBorder": false,

@@ -10,7 +10,7 @@
 
 section {
   display: flex;
-  height: 80vh;
+  height: 85vh;
   align-items: center;
   justify-content: space-between;
   opacity: 0;
@@ -134,7 +134,14 @@ section button:hover {
 }
 .section-intro .intro {
   max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   line-height: 2.5rem;
+}
+.section-intro .intro p {
+  margin-top: 2rem;
 }
 
 .about {
@@ -178,9 +185,9 @@ section button:hover {
   font-weight: 500;
 }
 .about-description p span, .education-description p span, .skills-description p span, .portfolio-description p span, .contact-description p span {
+  position: relative;
   font-weight: 700;
   text-transform: none;
-  border-bottom: 8px solid #01aeff;
 }
 
 .education, .skills {
@@ -268,6 +275,91 @@ section button:hover {
   rotate: 15deg;
 }
 
+.intro-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.intro-detail h3 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.animation {
+  height: 50px;
+  overflow: hidden;
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.animation > div > div {
+  padding: 0.25rem 0.75rem;
+  height: 100%;
+  margin-bottom: 2.81rem;
+  display: inline-block;
+  font-size: 1.5rem;
+}
+
+.animation div:first-child {
+  animation: text-animation 8s infinite;
+}
+
+.first div {
+  width: 100%;
+  background-color: #20a7d8;
+}
+
+.second div {
+  width: 100%;
+  background-color: #006488;
+  color: #fff;
+}
+
+.third div {
+  width: 100%;
+  background-color: #06232e;
+  color: #fff;
+}
+
+@keyframes text-animation {
+  0% {
+    margin-top: 0;
+  }
+  10% {
+    margin-top: 0;
+  }
+  20% {
+    margin-top: -4.9rem;
+  }
+  30% {
+    margin-top: -4.9rem;
+  }
+  40% {
+    margin-top: -10.3rem;
+  }
+  60% {
+    margin-top: -10.3rem;
+  }
+  70% {
+    margin-top: -4.9rem;
+  }
+  80% {
+    margin-top: -4.9rem;
+  }
+  90% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
 .btn-flip {
   opacity: 1;
   outline: 0;
