@@ -69,6 +69,11 @@ section button:hover {
   background-color: #008ccd;
 }
 
+.portfolio-title {
+  overflow-x: hidden;
+  scroll-behavior: none;
+}
+
 .fade-in {
   opacity: 0;
   transition: filter 100ms ease-in, transform 300ms ease-in, opacity 300ms ease-in;
@@ -85,7 +90,8 @@ section button:hover {
 
 .section-intro {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 5rem;
 }
 .section-intro .profile {
   opacity: 1;
@@ -308,6 +314,7 @@ section button:hover {
 }
 
 .animation div:first-child {
+  scroll-behavior: none;
   animation: text-animation 8s infinite;
 }
 
@@ -370,7 +377,6 @@ section button:hover {
   letter-spacing: 1px;
   display: inline-block;
   text-decoration: none;
-  font-family: "Open Sans";
   text-transform: uppercase;
 }
 .btn-flip:hover:after {
@@ -669,6 +675,23 @@ footer span {
   .portfolio-line-description-left > img, .portfolio-line-description-right > img {
     width: 100%;
   }
+}
+
+.portfolio-video {
+  flex-direction: column;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.portfolio-video article {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.portfolio-video article iframe {
+  border-radius: 8px;
 }
 
 body {

@@ -72,6 +72,11 @@ section {
 
 
 } 
+.portfolio-title{
+    overflow-x: hidden;
+    scroll-behavior: none;
+}
+
 
 .fade-in{
     opacity: 0;
@@ -98,7 +103,8 @@ section {
 
 .section-intro{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 5rem;
     .profile{
         opacity: 1;
         position: relative;
@@ -349,6 +355,7 @@ section {
 }
 
 .animation div:first-child {
+    scroll-behavior: none;
   animation: text-animation 8s infinite;
 }
 
@@ -393,7 +400,6 @@ $speed: 0.5s;
   letter-spacing: 1px;
   display: inline-block;
   text-decoration: none;
-  font-family: 'Open Sans';
   text-transform: uppercase;
   
   &:hover{
@@ -728,4 +734,21 @@ section {
         }
     }
   }
+}
+
+.portfolio-video{
+    flex-direction: column;
+    height: fit-content;
+    article{
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+        iframe{
+            border-radius: 8px;
+        }
+    }
 }
