@@ -11,8 +11,7 @@
   font-weight: 600;
   color: #dddddd;
   margin-block: 0;
-  -webkit-margin-before: 2rem;
-          margin-block-start: 2rem;
+  margin-block-start: 2rem;
 }
 .sectionintro .intro h1 span {
   color: #FFE600;
@@ -143,7 +142,6 @@ html *, html *::before, html *::after {
 
 .nav {
   display: flex;
-  position: -webkit-sticky;
   position: sticky;
   font-size: 1.2rem;
   font-family: poppins, sans-serif;
@@ -222,8 +220,7 @@ html *, html *::before, html *::after {
     list-style: none;
     height: 100%;
     width: 100%;
-    -webkit-padding-start: 0;
-            padding-inline-start: 0;
+    padding-inline-start: 0;
     margin-block: 0 30px;
   }
   .nav .hamburgermenu .menusmall.active ul li {
